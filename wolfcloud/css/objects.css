@@ -1,0 +1,14 @@
+.panel {
+    background: #ecf0f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 3%;
+}
+
+.panel-title {
+    font-size: 110%;
+}
+
+.panel-body {
+    text-align: justify;
+}
