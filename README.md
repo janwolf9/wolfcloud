@@ -1,3 +1,3 @@
 # wolfcloud
-cloud for save data online
-http://klinka.si/wolfcloud
+cloud for saving data online
+http://wolfcloud.easystoreorder.com
