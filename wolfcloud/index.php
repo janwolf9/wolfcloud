@@ -1,7 +1,7 @@
 <?php
    session_start();
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $con =  mysqli_connect("localhost", "klinkas_sportski", "]0Z+H?93ns9~", "klinkas_sportanje");
+    $con =  mysqli_connect("sers43438.ipagemysql.com", "skrbnik", "qwertzuiop123", "wolfcloud");
       if (isset($_POST['login_user'])) {
       $username = mysqli_real_escape_string($con, $_POST['username']);
       $password = mysqli_real_escape_string($con, $_POST['password']);
@@ -12,7 +12,7 @@
       if (empty($password)) {
         array_push($errors, "Password is required");
       }
-  
+
       $result14 = mysqli_query($con, "SELECT * FROM users WHERE username='$username' LIMIT 1");
       $user = mysqli_fetch_assoc($result14);
 
@@ -26,7 +26,7 @@
         $results = mysqli_query($con, "SELECT * FROM users WHERE username='$username' AND password='$password'");
         if (mysqli_num_rows($results) == 1) {
           $_SESSION['username1'] = $username;
-          $_SESSION['success'] = "You are now logged in";
+        //  $_SESSION['success'] = "You are now logged in";
           header('location: update/index.php');
         }else {
           echo "Username or Password is incorrect";
@@ -107,8 +107,8 @@
                 	</div>
                   <h1>                         </h1>
                   <!--<input type="button" value="Register" href="registration/register.php" >-->
-                  <a href="registration/register.php" target="_blank">Register</a>
-                  <a href="registration/changepassword2.php" target="_blank">Pozabljeno geslo</a>
+                  <a href="registration/registerjs.html">Register</a>
+                  <a href="registration/changepassword2.php">Pozabljeno geslo</a>
                </form>
                <div style = "font-size:11px; color:#cc0000; margin-top:10px"><?php echo $error; ?></div>
             </div>
