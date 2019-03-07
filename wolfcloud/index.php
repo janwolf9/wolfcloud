@@ -1,7 +1,7 @@
 <?php
    session_start();
    if($_SERVER["REQUEST_METHOD"] == "POST") {
-    $con =  mysqli_connect("sers43438.ipagemysql.com", "skrbnik", "qwertzuiop123", "wolfcloud");
+    $con =  mysqli_connect("localhost", "root", "", "wolfcloud");
       if (isset($_POST['login_user'])) {
       $username = mysqli_real_escape_string($con, $_POST['username']);
       $password = mysqli_real_escape_string($con, $_POST['password']);
